@@ -39,7 +39,7 @@ sudo update-grub
 _end
 
 _start "Install git, zsh, tmux, jq"
-sudo apt-get install -y git zsh tmux jq
+sudo apt-get install -y build-essential git zsh tmux jq
 _end
 
 _start "VIM configuration"
