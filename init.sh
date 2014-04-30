@@ -1,6 +1,8 @@
 #! /bin/bash
 
-LC_ALL="en_US.UTF-8"
+LANG="en_US.UTF-8"
+LC_ALL=$LANG
+export LANG LC_ALL
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 sudo echo "* DIR set to $DIR"
