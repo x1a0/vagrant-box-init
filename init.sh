@@ -35,6 +35,7 @@ _end
 
 _start "Change APT sources"
 sudo sed -i "s/us\./se./g" /etc/apt/sources.list
+sudo apt-get update
 _end
 
 _start "Install git, zsh, tmux, jq"
