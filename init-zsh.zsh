@@ -1,4 +1,4 @@
-!# /bin/zsh
+#! /bin/zsh
 
 if [ ! -f $HOME/.zpreztorc ]; then
   git clone --recursive git@github.com:zhangxiao/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
