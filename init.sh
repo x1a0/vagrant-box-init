@@ -46,3 +46,8 @@ _end
 _start "Dotfiles"
 /bin/bash $DIR/init-dotfiles.sh
 _end
+
+_start "Disable boot menu"
+sudo sed -i "s/GRUB_TIMEOUT=2/GRUB_TIMEOUT=0/g" /etc/default/grub
+sudo update-grub
+_end
