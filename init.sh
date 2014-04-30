@@ -14,8 +14,11 @@ _end() {
   echo ""
 }
 
-_start "Disable sudo auth"
-EDITOR="/bin/bash $DIR/sudoedit-bridge.sh" sudoedit /etc/sudoers
+_start "Disable sudo auth (only works in bash now)"
+OLD_EDITOR=$EDITOR
+export EDITOR="/bin/bash $DIR/sudoedit-bridge.sh"
+sudoedit /etc/sudoers
+EDITOR=$OLD_EDITOR
 _end
 
 _start "Add ssh public key"
